@@ -1,0 +1,22 @@
+:root {
+  --color-bg: #e5e7e6;
+  --color-bg-light: #EEE6D8;
+  --color-primary: #DAAB3A;
+  --color-secondary: #B67332;
+  --color-dark: #93441A;
+  --color-white: #fff;
+  --color-grey: #666;
+  --color-footer-bg: #93441A;
+  --color-footer-text: #EEE6D8;
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-logo: 'Adlery Pro', sans-serif;
+  --transition-main: 0.3s cubic-bezier(.4,0,.2,1);
+  --border-radius: 8px;
+}
+
+/* Réseaux sociaux du festival */
+:root {
+  --url-instagram: "https://www.instagram.com/alambik_festival/";
+  --url-spotify: "https://open.spotify.com/playlist/1A3BFQFaPAc1T7F8zqHZ4P?si=2f9e8c8a049d47b5";
+}

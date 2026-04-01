@@ -1,0 +1,109 @@
+.home {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('/images/accueil/alambik_accueil.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.festival-logo {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+  filter: brightness(0) saturate(100%) invert(71%) sepia(46%) saturate(592%) hue-rotate(5deg) brightness(95%) contrast(90%) drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
+}
+
+.festival-subtitle {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #DAAB3A;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 1.2rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+  background: white;
+  color: #B67332;
+}
+
+.btn-primary:hover {
+  background: #EEE6D8;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: #B67332;
+}
+
+@media (max-width: 768px) {
+  .festival-logo {
+    max-width: 90%;
+  }
+
+  .festival-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+  }
+}

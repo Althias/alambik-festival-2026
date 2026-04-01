@@ -1,0 +1,20 @@
+.btn, .btn-submit {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: var(--font-main);
+  font-size: 1.1rem;
+  border: none;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: transform var(--transition-main), box-shadow var(--transition-main);
+}
+
+.btn:hover, .btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(218, 171, 58, 0.2);
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+}

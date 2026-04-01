@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # Ne pas rediriger les fichiers existants (CSS, JS, images, etc.)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  
+  # Ne pas rediriger les requêtes vers /api/
+  RewriteCond %{REQUEST_URI} !^/api/
+  
+  # Rediriger tout le reste vers index.html
+  RewriteRule . /index.html [L]
+</IfModule>

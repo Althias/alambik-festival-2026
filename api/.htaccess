@@ -1,0 +1,23 @@
+# .htaccess pour l'API Alambik Festival
+
+# Protection des fichiers sensibles
+<Files ".env">
+    Require all denied
+</Files>
+
+<Files "config.php">
+    Require all denied
+</Files>
+
+# CORS - Permettre les requêtes depuis votre domaine
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type"
+</IfModule>
+
+# Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml application/json
+</IfModule>
+

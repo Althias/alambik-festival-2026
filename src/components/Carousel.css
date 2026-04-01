@@ -1,0 +1,138 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  position: relative;
+  margin-bottom: 2rem;
+  min-height: 520px;
+}
+
+.carousel-image-wrapper {
+  position: relative;
+  width: 900px;
+  height: 500px;
+  background: #eee;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(183,115,50,0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2.5rem;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+  transition: transform 0.5s cubic-bezier(.4,0,.2,1);
+}
+
+.carousel-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(218,171,58,0.85);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.carousel-arrow {
+  background: var(--color-primary, #DAAB3A);
+  color: #fff;
+  border: none;
+  font-size: 2.8rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: auto;
+  right: auto;
+  transform: translateY(-50%);
+  box-shadow: 0 2px 8px rgba(183,115,50,0.13);
+  padding: 0;
+}
+
+.carousel-arrow-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  position: relative;
+  top: -0.08em;
+}
+.carousel-arrow.left {
+  left: 0;
+}
+.carousel-arrow.right {
+  right: 0;
+}
+.carousel-arrow:hover {
+  background: var(--color-secondary, #B67332);
+}
+
+.carousel-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.4rem;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+.dot.active {
+  background: var(--color-primary, #DAAB3A);
+}
+@media (max-width: 1200px) {
+  .carousel-image-wrapper {
+    width: 98vw;
+    max-width: 98vw;
+    height: 45vw;
+    min-height: 220px;
+    border-radius: 16px;
+  }
+  .carousel-image {
+    border-radius: 16px;
+  }
+}
+@media (max-width: 700px) {
+  .carousel-image-wrapper {
+    width: 99vw;
+    max-width: 99vw;
+    height: 55vw;
+    min-height: 160px;
+    border-radius: 10px;
+    margin: 0 0.5rem;
+  }
+  .carousel-image {
+    border-radius: 10px;
+  }
+  .carousel-arrow {
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1.5rem;
+  }
+}

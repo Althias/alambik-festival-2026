@@ -1,0 +1,14 @@
+# .htaccess minimal pour test
+# Si ce fichier cause une erreur 500, renommez-le temporairement
+
+# Protection du .env
+<Files ".env">
+    Require all denied
+</Files>
+
+# CORS
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type"
+</IfModule>
